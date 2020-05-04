@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+
+body {
+	font-family: 'Baloo Thambi 2', calibri;
+	height: 100%;
+	background-image:url("images/bg2.jpg");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+html, body, iframe { 
+	height: 100%; 
+	overflow-x:hidden;
+}
+
+*{
+	margin:0;
+	padding:0;
+	list-style:0;
+	text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  opacity:0.4;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  opacity:0.4;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  opacity:0.4;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	cursor:pointer;
+}
+
+/* width */
+::-moz-scrollbar {
+  width: 5px;
+  opacity:0.4;
+}
+
+/* Track */
+::-moz-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  opacity:0.4;
+}
+ 
+/* Handle */
+::-moz-scrollbar-thumb {
+  background: white;
+  opacity:0.4;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-moz-scrollbar-thumb:hover {
+	cursor:pointer;
+}
+
+header img {
+	margin-right:30px;
+	margin-left:5px;
+	background:#177191;
+	padding:10px;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	border-bottom: 3px solid white;
+}
+
+.sidebar {
+	width:250px;
+	position:fixed;
+	height: 100vh;
+	left:-250px;
+	background: #177191;
+	transition: all .5s ease;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.sidebar header {
+	font-size: 22px;
+	color:white;
+	font-weight: bold;
+	line-height:70px;
+	background: #063146;
+	margin:0 auto;
+	cursor:pointer;
+}
+
+.sidebar button {
+	display:block;
+	border:none;
+	width:100%;
+	cursor:pointer;
+	color:white;
+	font-size: 17px;
+	line-height: 60px;
+	background:none;
+	text-align: left;
+	border-top: 1px solid rgba(255,255,255,.1);
+	border-bottom: 1px solid black;
+	margin:0 auto;
+	font-family: 'Baloo Thambi 2', calibri;
+}
+
+.sidebar .button i {
+	margin-right:5px;
+}
+
+.sidebar .button {
+	padding-left: 30px;
+	transition: .4s;
+}
+
+.sidebar .button:hover {
+	padding-left:40px;
+}
+
+#check {
+	display:none;
+}
+
+label #btn,label #cancel {
+	position:fixed;
+	cursor:pointer;
+	border:1px solid white;
+	border-radius:3px;
+	opacity:0.2;
+	background:grey;
+	box-shadow: 4px 10px 5px black;
+}
+
+label #btn {
+	left:20px;
+	top:25px;
+	font-size:25px;
+	color:white;
+	padding:6px 12px;
+	transition:all .5s ease;
+}
+
+label #btn:hover, label #cancel:hover {
+	background:black;
+	opacity:0.6;
+}
+
+label #cancel {
+	z-index:1111;
+	left: -195px;
+	top:17px;
+	font-size:20px;
+	color:#0a5275;
+	padding:2px 6px;
+	transition:all .5s ease;
+}
+
+#check:checked ~ .sidebar {
+	 left:0;
+}
+
+#check:checked ~ label #btn {
+	left: 250px;
+	opacity:0;
+	pointer-events:none;
+}
+
+#check:checked ~ label #cancel {
+	left:195px;
+}
+
+#check:checked ~ section {
+	margin-left:250px;
+}
+
+section {
+	transition:all .5s ease;
+	height:100%;
+}
+
+.footer {
+	height:100vh;
+	padding-top:20px;
+	padding-bottom:20px;
+	width: 100%;
+   	background:#063146;
+   	color: white;
+   	overflow:hidden;
+}
+
+.footer p {
+	margin-left:30px;
+}
+
+.footer p i {
+	margin-right:5px;
+}
+
+#nav-header {
+	margin:0;
+	padding:0;
+}
+
+.contact-list {
+	text-align:right;
+	background:white;
+	width:100%;
+	font-size:13px;
+}
+
+.contact-list ul li {
+	text-decoration:none;
+	display:inline;
+	color:#042331;
+	margin-right:20px;
+}
+
+.contact-list ul li i {
+	margin-right:5px;
+}
+
+.logo-indolink {
+	width:100%;
+	padding:0;
+}
+
+.logo-indolink img {
+	float:right;
+	width:70px;
+	border-bottom:1px dotted green;
+	margin-bottom: -5px;
+	margin:20px;
+}
+
+.logo-indolink i {
+	margin-left:21px;
+	margin-top:55px;
+	font-size:20px;
+	color:white;
+	padding:8px 10px;
+	cursor:pointer;
+	border:1px solid white;
+	border-radius:3px;
+	opacity:0.2;
+	transition:all .5s ease;
+	background:grey;
+	box-shadow: 4px 10px 5px black;
+	position:fixed;
+}
+
+.logo-indolink i:hover {
+	background:black;
+	opacity:0.6;
+}
+
+#home-botgram {
+	display:block;
+	margin:0 auto;
+	padding:0;
+	width:80%;
+}
+
+#home-botgram .title-content {
+	margin:0;
+	padding:20px;
+}
+
+#home-botgram .telegram-definition img {
+	border:thick solid white;
+	width:80%;
+}
+
+.pagebot-how {
+	width:100%;
+	height:70vh;
+	border:none;
+ }
+
+.how-app-bot {
+	background:white;
+	padding-top:10px;
+	padding-left:50px;
+	padding-bottom:10px;
+	padding-right:50px;
+}
+
+.botgram-app {
+	padding:0;
+	margin:0;
+	width:30%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.step-install button i {
+	padding:5px;
+	color:black;
+}
+
+.step-install button {
+	margin-left:3px;
+	cursor:pointer;
+}
+
+.box-body {
+	display:block;
+	width:80%;
+	padding:0;
+	margin:0 auto;
+}
+
+.box-body .box {
+	margin-top:50px;
+	width:50%;
+	background:white;
+	padding:20px;
+	float:left;
+}
+
+.box-body .box .row {
+	width:100%;
+}
+
+.box-body .box .row label {
+	display:none;
+}
+
+.box-body .box .row input {
+	width:100%;
+	line-height:30px;
+	font-family: 'Baloo Thambi 2', calibri;
+}
+
+.box-body .box .row textarea {
+	width:100%;
+	line-height:30px;
+	font-family: 'Baloo Thambi 2', calibri;
+	resize:none;
+}
+
+.textarea {
+	width:100%;
+	height:200px;
+}
+
+.box-body .box .btn {
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+.box-body .box .btn button {
+	cursor:pointer;
+	float:right;
+	background:blue;
+	color:white;
+	border:none;
+	text-decoration:none;
+	padding:5px 10px;
+}
+
+.footer-home-botgram {
+   width: 100%;
+   color: black;
+   text-align: center;
+   padding:20px;
+}
+
+.mobile-content-how {
+	display:none;
+}
+
+.mobile-content-how button {
+	display:none;
+}
+
+.phone {
+	margin-top:40px;
+	width:24%;
+	float:left;
+}
+
+.phone img {
+	width:100%;
+}
+
+@media only screen and (max-width: 600px) {
+  html, body {
+	font-family: 'Baloo Thambi 2', cursive;
+	background:white;
+	overflow-x: hidden;
+	margin:0;
+	padding:0;
+	}
+
+/* width */
+  ::-webkit-scrollbar {
+  	width: 5px;
+  	opacity:0.4;
+	}
+
+/* Track */
+  ::-webkit-scrollbar-track {
+  	box-shadow: inset 0 0 5px grey; 
+  	border-radius: 10px;
+  	opacity:0.4;
+	}
+ 
+/* Handle */
+  ::-webkit-scrollbar-thumb {
+  	background: white;
+  	opacity:0.4;
+  	border-radius: 10px;
+	}
+
+/* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	cursor:pointer;
+	}
+
+  header img {
+	background:none;
+	padding:0;
+	margin:0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom: 0;
+	border:none;
+	}
+
+  .sidebar {
+	width:90%;
+	position:absolute;
+	height: 100%;
+	left:-90%;
+	background: #1c2325;
+	margin-right:0px;
+	overflow:hidden;
+	z-index:1;
+	}
+
+  .sidebar header {
+	font-size: 20px;
+	color:white;
+	font-weight: bold;
+	background:none;
+	margin:0;
+	padding:0;
+	cursor:pointer;
+	text-align:center;
+	background:#162023;
+	line-height: 60px;
+	}
+
+  .sidebar button {
+	display:block;
+	border:none;
+	width:100%;
+	cursor:pointer;
+	color:white;
+	font-size: 17px;
+	line-height: 60px;
+	background:none;
+	text-align: left;
+	border-top: 1px solid rgba(255,255,255,.1);
+	border-bottom: 1px solid black;
+	margin:0 auto;
+	font-family: 'Baloo Thambi 2', cursive;
+	}
+
+  .sidebar .button i {
+	margin-right:5px;
+	}
+
+  .sidebar .button {
+	padding-left: 30px;
+	transition: .4s;
+	}
+
+  .sidebar .button:hover {
+	padding-left:40px;
+	}
+
+  #check {
+	display:none;
+	}
+
+  label #btn,label #cancel {
+	position:absolute;
+	cursor:pointer;
+	border:1px solid white;
+	border-radius:3px;
+	opacity:0.2;
+	background:grey;
+	box-shadow: 4px 10px 5px black;
+	}
+
+  label #btn {
+	left:20px;
+	top:25px;
+	font-size:15px;
+	color:white;
+	padding:6px 12px;
+	}
+
+  label #btn:hover, label #cancel:hover {
+	background:black;
+	opacity:0.6;
+	}
+
+  label #cancel {
+	left: -70%;
+	top:17px;
+	font-size:20px;
+	color:white;
+	padding:2px 6px;
+	}
+
+  #check:checked ~ .sidebar {
+	 left:0;
+	 z-index: 1;
+	}
+
+  #check:checked ~ label #btn {
+	opacity:0;
+	pointer-events:none;
+	}
+
+  #check:checked ~ label #cancel {
+	left:75%;
+	top:19px;
+	}
+
+  #check:checked ~ section {
+  	margin:0;
+  	padding:0;
+	}
+
+  section {
+  	width:100%;
+	height:100%;
+	overflow-x:none;
+	}
+
+  .footer {
+	padding-top:20px;
+	padding-bottom:20px;
+	width: 100%;
+   	background:none;
+   	color: white;
+	}
+
+  .footer p {
+	margin-left:30px;
+	}
+
+  .footer p i {
+	margin-right:5px;
+	}
+
+  #nav-header {
+	margin:0;
+	padding:0;
+	}
+
+  .contact-list {
+	display:none;
+	}
+
+  .logo-indolink {
+  	margin-bottom:-20px;
+	width:100%;
+	padding:0;
+	text-align:right;
+	}
+
+  .logo-indolink img {
+  	margin-top:30px;
+	width:70px;
+	border-bottom:1px dotted green;
+	margin-right:20px;
+	}
+
+  .logo-indolink i {
+  	top:-29px;
+  	text-align:right;
+	font-size:10px;
+	color:white;
+	padding:8px 10px;
+	cursor:pointer;
+	border:1px solid white;
+	border-radius:3px;
+	opacity:0.2;
+	transition:all .5s ease;
+	background:grey;
+	box-shadow: 4px 10px 5px black;
+	position:relative;
+	}
+
+  .logo-indolink i:hover {
+	background:black;
+	opacity:0.6;
+	}
+
+  #home-botgram {
+	display:block;
+	margin:0;
+	padding:0;
+	margin-bottom:20px;
+	width:100%;
+	}
+
+  #home-botgram .title-content h1 {
+	font-size:20px;
+	}
+
+	#home-botgram .telegram-definition img {
+	border:thin solid white;
+	width:100%;
+	}
+
+	.pagebot-how {
+	display:none;
+	}
+
+	.how-app-bot {
+	display:block;
+	background:none; 
+	padding:0;
+	margin-left:10px;
+	}
+
+	.botgram-app {
+	padding:0;
+	margin:0;
+	width:100%;
+	border:thin solid black;
+	}
+
+	.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.step-install button i {
+	padding:5px;
+	color:black;
+}
+
+.step-install button {
+	margin-left:3px;
+	cursor:pointer;
+}
+
+.box-body {
+	display:block;
+	width:80%;
+	padding:0;
+	margin:0 auto;
+}
+
+.box-body .box {
+	margin-top:10px;
+	width:100%;
+	background:white;
+	padding:0px;
+	float:left;
+}
+
+.box-body .box .row {
+	width:100%;
+}
+
+.box-body .box .row label {
+	display:none;
+}
+
+.box-body .box .row input {
+	width:100%;
+	line-height:30px;
+	font-family: 'Baloo Thambi 2', calibri;
+}
+
+.box-body .box .row textarea {
+	width:100%;
+	line-height:30px;
+	font-family: 'Baloo Thambi 2', calibri;
+	resize:none;
+}
+
+.textarea {
+	width:100%;
+	height:200px;
+}
+
+.box-body .box .btn {
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+.box-body .box .btn button {
+	cursor:pointer;
+	float:right;
+	background:blue;
+	color:white;
+	border:none;
+	text-decoration:none;
+	padding:5px 10px;
+}
+
+.footer-home-botgram {
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: center;
+   padding:0;
+}
+
+.mobile-content-how {
+	display:inline-block !important;
+	width:100%;
+	margin-bottom:10px;
+	margin-top:5px;
+}
+
+.mobile-content-how button {
+	display:inline-block !important;
+	width:100%;
+	line-height: 40px;
+	cursor:pointer;
+}
+
+.phone {
+	margin-top:0px;
+	width:100%;
+	float:none;
+}
+
+.phone img {
+	width:100%;
+}
+
+}
